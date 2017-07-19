@@ -103,6 +103,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Enable wireless Xbox 360 controller support
+# init file
+PRODUCT_COPY_FILES += \
+    vendor/ctosp/prebuilt/common/etc/init/cerberusos-updates.rc:system/etc/init/cerberusos-updates.rc
+
+# Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
