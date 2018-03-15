@@ -132,7 +132,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Exchange2
 
-# Extra tools in Lineage
+# Fonts
+PRODUCT_PACKAGES += \
+    CustomFonts
+
+# Extra tools
 PRODUCT_PACKAGES += \
     7z \
     awk \
