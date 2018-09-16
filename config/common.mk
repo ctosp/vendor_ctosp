@@ -99,6 +99,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
+
 # Optional packages
 PRODUCT_PACKAGES += \
     libemoji \
@@ -108,6 +109,45 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
+
+# Custom Lineage packages
+PRODUCT_PACKAGES += \
+    AudioFX \
+    LineageSettingsProvider \
+    ExactCalculator \
+    LockClock \
+    WallpaperPicker \
+    WeatherProvider
+
+# CTOSP Packages
+PRODUCT_PACKAGES += \
+    GContacts \
+    GDeskClock \
+    GDialer \
+    GMessaging \
+    Lawnchair
+
+# Exchange support
+PRODUCT_PACKAGES += \
+    Exchange2
+
+# Extra tools in Lineage
+PRODUCT_PACKAGES += \
+    7z \
+    awk \
+    bash \
+    bzip2 \
+    curl \
+    htop \
+    lib7z \
+    libsepol \
+    pigz \
+    powertop \
+    unrar \
+    unzip \
+    vim \
+    wget \
+    zip
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -124,6 +164,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	Launcher3QuickStep
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
