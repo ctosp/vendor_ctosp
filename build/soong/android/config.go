@@ -8,6 +8,6 @@ var CustomConfig = struct {
 }{
 	// JavaSourceOverlayModuleWhitelist
 	[]string{
-		"org.pixelexperience.keydisabler",
+		"org.ctosp.keydisabler",
 	},
 }
