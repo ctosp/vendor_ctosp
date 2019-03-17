@@ -146,9 +146,6 @@ PRODUCT_BOOT_JARS += \
 # Branding
 include vendor/ctosp/config/branding.mk
 
-# Gapps
-include vendor/gapps/config.mk
-
 # Themes
 include vendor/themes/config.mk
 
