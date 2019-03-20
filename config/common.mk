@@ -125,8 +125,9 @@ PRODUCT_PACKAGES += \
     GDeskClock \
     GDialer \
     GMessaging \
-    Lawnchair
-
+    Lawnchair \
+    LatinIME
+    
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
