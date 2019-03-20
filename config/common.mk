@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
     GDialer \
     GMessaging \
     Lawnchair \
+    PixelLauncher\
     LatinIME
     
 # Exchange support
