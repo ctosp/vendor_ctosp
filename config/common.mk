@@ -125,7 +125,7 @@ PRODUCT_PACKAGES += \
     GDeskClock \
     GDialer \
     GMessaging \
-    Lawnchair \
+
     PixelLauncher\
     LatinIME
     
