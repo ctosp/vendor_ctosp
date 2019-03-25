@@ -188,6 +188,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.ctosp.keydisabler
 
+# GApps
+include vendor/gapps/config.mk
+
 # Branding
 include vendor/ctosp/config/branding.mk
 
