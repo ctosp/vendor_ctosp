@@ -125,7 +125,6 @@ PRODUCT_PACKAGES += \
     GDeskClock \
     GDialer \
     GMessaging \
-
     PixelLauncher\
     LatinIME
     
