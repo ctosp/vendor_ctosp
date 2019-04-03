@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
     GDialer \
     GMessaging \
     Lawnchair\
+    Quickstep\
     LatinIME
     
 # Exchange support
