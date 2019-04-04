@@ -188,6 +188,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.ctosp.keydisabler
 
+# OTA
+include vendor/ctosp/config/ota.mk
+
 # GApps
 include vendor/gapps/config.mk
 
