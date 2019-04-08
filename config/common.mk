@@ -170,8 +170,7 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
-PRODUCT_PACKAGES += \
-	Launcher3QuickStep
+
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
