@@ -109,7 +109,6 @@ PRODUCT_COPY_FILES += \
 # Optional packages
 PRODUCT_PACKAGES += \
     libemoji \
-    AudioFX \
     LiveWallpapersPicker
 
 # Include explicitly to work around GMS issues
