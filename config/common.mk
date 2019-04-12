@@ -118,7 +118,6 @@ PRODUCT_PACKAGES += \
 
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     LineageSettingsProvider \
     ExactCalculator \
     LockClock \
@@ -127,11 +126,7 @@ PRODUCT_PACKAGES += \
 
 # CTOSP Packages
 PRODUCT_PACKAGES += \
-    GContacts \
-    GDeskClock \
-    GDialer \
-    GMessaging \
-    LatinIME
+    LatinIME \
     
 
 # Exchange support
