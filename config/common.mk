@@ -194,7 +194,7 @@ include vendor/ctosp/config/ota.mk
 include vendor/gapps/config.mk
 
 # Pixel Style
-include vendor/pixelstyle/config.mk
+#include vendor/pixelstyle/config.mk
 
 # Branding
 include vendor/ctosp/config/branding.mk
