@@ -127,7 +127,6 @@ PRODUCT_PACKAGES += \
 # CTOSP Packages
 PRODUCT_PACKAGES += \
     LatinIME
-    
 
 # Exchange support
 PRODUCT_PACKAGES += \
