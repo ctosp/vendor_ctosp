@@ -1,32 +1,21 @@
-# OTA default build type
-ifeq ($(OTA_TYPE),)
-OTA_TYPE=UNOFFICIAL
+ifneq ($(IS_GENERIC_SYSTEM_IMAGE), true)
+ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
+
+ifeq ($(IS_GO_VERSION), true)
+CUSTOM_OTA_VERSION_CODE := pie_go
+else
+CUSTOM_OTA_VERSION_CODE := pie
 endif
 
-# Make sure the uppercase is used
-ifeq ($(OTA_TYPE),beta)
-OTA_TYPE=BETA
-endif
-ifeq ($(OTA_TYPE),official)
-OTA_TYPE=OFFICIAL
-endif
+CUSTOM_PROPERTIES += \
+    org.ctosp.ota.version_code=$(CUSTOM_OTA_VERSION_CODE) \
+    sys.ota.disable_uncrypt=1
 
-#Device name
-DEVICE := $(subst ctosp_,,$(TARGET_PRODUCT))
-
-ifneq ($(OTA_TYPE),UNOFFICIAL)
-# OTA app
 PRODUCT_PACKAGES += \
     Updates
 
-# OTA Configuration
-$(shell echo -e "OTA_Configuration\n \
-ota_beta=https://raw.githubusercontent.com/ctosp/OTAconfig/pie/ota_$(DEVICE)_beta.xml\n \
-ota_official=https://raw.githubusercontent.com/ctosp/OTAconfig/pie/ota_$(DEVICE)_official.xml\n \
-device_name=org.ctosp.device\n \
-release_type=Pie\n \
-version_source=org.ctosp.version\n \
-version_delimiter=-\n \
-version_position=1\n \
-version_format=yyMMdd" > $(OTA_DIR)/ota_conf)
+PRODUCT_COPY_FILES += \
+    vendor/ctosp/config/permissions/org.pixelexperience.ota.xml:system/etc/permissions/org.pixelexperience.ota.xml
+
+endif
 endif
