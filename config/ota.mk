@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
     Updates
 
 PRODUCT_COPY_FILES += \
-    vendor/ctosp/config/permissions/org.pixelexperience.ota.xml:system/etc/permissions/org.pixelexperience.ota.xml
+    vendor/ctosp/config/permissions/org.ctosp.ota.xml:system/etc/permissions/org.ctosp.ota.xml
 
 endif
 endif
