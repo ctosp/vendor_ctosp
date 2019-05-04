@@ -71,7 +71,8 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/ctosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
     vendor/ctosp/config/permissions/privapp-permissions-ctosp.xml:system/etc/permissions/privapp-permissions-ctosp.xml \
-    vendor/ctosp/config/permissions/org.lineageos.snap.xml:system/etc/permissions/org.lineageos.snap.xml
+    vendor/ctosp/config/permissions/org.lineageos.snap.xml:system/etc/permissions/org.lineageos.snap.xml \
+    vendor/ctosp/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
 
 # init.d support
 PRODUCT_COPY_FILES += \
