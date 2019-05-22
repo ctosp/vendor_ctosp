@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
 # Enable wireless Xbox 360 controller support
 # init file
 PRODUCT_COPY_FILES += \
-    vendor/ctosp/prebuilt/common/etc/init/cerberusos-updates.rc:system/etc/init/cerberusos-updates.rc
+    vendor/ctosp/prebuilt/common/etc/init/ctospos-updates.rc:system/etc/init/ctospos-updates.rc
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
@@ -200,14 +200,20 @@ include vendor/pixelstyle/config.mk
 
 # Branding
 include vendor/ctosp/config/branding.mk
+
+# Some props that we need for the google stuff we're adding
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.com.google.ime.height_ratio=1.05 \
+    ro.com.google.ime.emoji_key=false
+
 PRODUCT_GENERIC_PROPERTIES += \
-    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.cerberus.overlay.lawnconf
+    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.ctosp.overlay.lawnconf
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/ctosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/ctosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/ctosp/prebuilt/common/bin/50-cerberus.sh:system/addon.d/50-cerberus.sh \
+    vendor/ctosp/prebuilt/common/bin/50-ctosp.sh:system/addon.d/50-ctosp.sh \
     vendor/ctosp/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
  ifeq ($(AB_OTA_UPDATER),true)
@@ -217,7 +223,16 @@ PRODUCT_COPY_FILES += \
     vendor/ctosp/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+
 # Themes
 include vendor/themes/config.mk
+
+# Versioning System
+include vendor/ctosp/config/version.mk
+
+# Google sounds
+include vendor/ctosp/google/GoogleAudio.mk
+
+EXTENDED_POST_PROCESS_PROPS := vendor/ctosp/tools/ctosp_process_props.py
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
