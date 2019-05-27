@@ -23,10 +23,10 @@ ctosp: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(CUSTOM_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(CUSTOM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_TARGET_PACKAGE).md5sum
 	$(hide) ./vendor/ctosp/tools/generate_json_build_info.sh $(CUSTOM_TARGET_PACKAGE)
-  echo "##########################################################"
-  echo "##    Compilation Succeed                               ##!"
-  echo "##    CTOSP Package: $(CUSTOM_TARGET_PACKAGE)           ##"
-  echo "##########################################################"
-  echo "##    Enjoy the CTOSP!                                  ##"
-  echo "##########################################################"
+        echo "##########################################################"
+        echo "##    Compilation Succeed                               ##!"
+        echo "##    CTOSP Package: $(CUSTOM_TARGET_PACKAGE)           ##"
+        echo "##########################################################"
+        echo "##    Enjoy the CTOSP!                                  ##"
+        echo "##########################################################"
   
