@@ -230,8 +230,6 @@ include vendor/themes/config.mk
 # Versioning System
 include vendor/ctosp/config/version.mk
 
-# Google sounds
-include vendor/ctosp/google/GoogleAudio.mk
 
 EXTENDED_POST_PROCESS_PROPS := vendor/ctosp/tools/ctosp_process_props.py
 
