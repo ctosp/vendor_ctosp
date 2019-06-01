@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
 # Enable wireless Xbox 360 controller support
 # init file
 PRODUCT_COPY_FILES += \
-    vendor/ctosp/prebuilt/common/etc/init/ctospos-updates.rc:system/etc/init/ctospos-updates.rc
+    vendor/ctosp/prebuilt/common/etc/init/ctosp-updates.rc:system/etc/init/ctosp-updates.rc
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
