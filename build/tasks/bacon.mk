@@ -14,11 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CUSTOM_VERSION).zip
+CTOSP_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CTOSP_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(CUSTOM_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(CUSTOM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_TARGET_PACKAGE).md5sum
-	$(hide) ./vendor/ctosp/tools/generate_json_build_info.sh $(CUSTOM_TARGET_PACKAGE)
-	@echo "Package Complete: $(CUSTOM_TARGET_PACKAGE)" >&2
+	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(CTOSP_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(CTOSP_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(CTOSP_TARGET_PACKAGE).md5sum
+	$(hide) ./vendor/ctosp/tools/generate_json_build_info.sh $(CTOSP_TARGET_PACKAGE)
+	@echo "Package Complete: $(CTOSP_TARGET_PACKAGE)" >&2

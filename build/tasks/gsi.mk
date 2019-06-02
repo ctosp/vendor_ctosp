@@ -1,6 +1,6 @@
 # Copyright (C) 2017 Unlegacy-Android
 # Copyright (C) 2017 The LineageOS Project
-# Copyright (C) 2018 The PixelExperience Project
+# Copyright (C) 2019 CTSOP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-CUSTOM_INSTALLED_SYSTEMIMAGE := $(PRODUCT_OUT)/$(CUSTOM_VERSION).img
-CUSTOM_INSTALLED_SYSTEMIMAGE_COMPACTED := $(CUSTOM_INSTALLED_SYSTEMIMAGE).zip
+CTOSP_INSTALLED_SYSTEMIMAGE := $(PRODUCT_OUT)/$(CTOSP_VERSION).img
+CTOSP_INSTALLED_SYSTEMIMAGE_COMPACTED := $(CTOSP_INSTALLED_SYSTEMIMAGE).zip
 
 .PHONY: gsi
 gsi: $(INSTALLED_SYSTEMIMAGE)
-	$(hide) mv $(PRODUCT_OUT)/system.img $(CUSTOM_INSTALLED_SYSTEMIMAGE)
-	$(hide) zip -9qjX $(CUSTOM_INSTALLED_SYSTEMIMAGE_COMPACTED) $(CUSTOM_INSTALLED_SYSTEMIMAGE)
-	$(hide) $(MD5SUM) $(CUSTOM_INSTALLED_SYSTEMIMAGE_COMPACTED) | sed "s|$(PRODUCT_OUT)/||" > $(CUSTOM_INSTALLED_SYSTEMIMAGE_COMPACTED).md5sum
-	$(hide) ./vendor/ctosp/tools/generate_json_build_info.sh $(CUSTOM_TARGET_PACKAGE)
-	@echo "Package Complete: $(CUSTOM_INSTALLED_SYSTEMIMAGE_COMPACTED)" >&2
+	$(hide) mv $(PRODUCT_OUT)/system.img $(CTOSP_INSTALLED_SYSTEMIMAGE)
+	$(hide) zip -9qjX $(CTOSP_INSTALLED_SYSTEMIMAGE_COMPACTED) $(CTOSP_INSTALLED_SYSTEMIMAGE)
+	$(hide) $(MD5SUM) $(CTOSP_INSTALLED_SYSTEMIMAGE_COMPACTED) | sed "s|$(PRODUCT_OUT)/||" > $(CTOSP_INSTALLED_SYSTEMIMAGE_COMPACTED).md5sum
+	$(hide) ./vendor/ctosp/tools/generate_json_build_info.sh $(CTOSP_TARGET_PACKAGE)
+	@echo "Package Complete: $(CTOSP_INSTALLED_SYSTEMIMAGE_COMPACTED)" >&2
