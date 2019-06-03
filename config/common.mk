@@ -201,10 +201,6 @@ include vendor/pixelstyle/config.mk
 # Branding
 include vendor/ctosp/config/branding.mk
 
-# Some props that we need for the google stuff we're adding
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.com.google.ime.height_ratio=1.05 \
-    ro.com.google.ime.emoji_key=false
 
 PRODUCT_GENERIC_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.ctosp.overlay.lawnconf
