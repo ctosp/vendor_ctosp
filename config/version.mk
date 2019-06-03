@@ -42,7 +42,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ctosp.buildtype=$(CTOSP_BUILD_TYPE) \
     ctosp.ota.version=$(CTOSP_VERSION) \
     ro.ctosp.build.version=$(CTOSP_VERSION_NUMBER) \
-    ro.CTOSPmodversion=$(CTOSP_VERSION_P) \
     ro.ctosp.version=$(CTOSP_VERSION) \
     ro.ctosp.build_date=$(CTOSP_BUILD_DATE) \
     ro.ctosp.maintainer=$(CTOSP_MAINTAINER) \
