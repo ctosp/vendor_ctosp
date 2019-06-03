@@ -15,7 +15,6 @@
 # Versioning System
 # CTOSP Version.
 CTOSP_VERSION_NUMBER := v2.0
-CTOSP_VERSION_P := 2.0
 CTOSP_BUILD_DATE := $(shell date -u +%d-%m-%Y)
 CTOSP_DEVICE := $(CTOSP_BUILD)
 
