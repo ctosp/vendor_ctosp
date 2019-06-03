@@ -34,9 +34,6 @@ PRODUCT_PACKAGES += \
 
 endif
 
-# Set all versions
-CTOSP_VERSION := CTOSPOS-$(CTOSP_VERSION_NUMBER)-$(shell date +"%Y%m%d")-Pie4-$(CTOSP_DEVICE)-$(CTOSP_BUILD_TYPE)
-
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ro.ctosp.buildtype=$(CTOSP_BUILD_TYPE) \
