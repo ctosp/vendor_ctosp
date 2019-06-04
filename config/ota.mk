@@ -12,7 +12,7 @@ CTOSP_PROPERTIES += \
     sys.ota.disable_uncrypt=1
 
 PRODUCT_PACKAGES += \
-    Updates
+    CtospOTA
 
 PRODUCT_COPY_FILES += \
     vendor/ctosp/config/permissions/org.ctosp.ota.xml:system/etc/permissions/org.ctosp.ota.xml
