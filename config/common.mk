@@ -205,28 +205,8 @@ include vendor/ctosp/config/branding.mk
 PRODUCT_GENERIC_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.ctosp.overlay.lawnconf
 
-# Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/ctosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/ctosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/ctosp/prebuilt/common/bin/50-ctosp.sh:system/addon.d/50-ctosp.sh \
-    vendor/ctosp/prebuilt/common/bin/blacklist:system/addon.d/blacklist
-
- ifeq ($(AB_OTA_UPDATER),true)
-PRODUCT_COPY_FILES += \
-    vendor/ctosp/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/ctosp/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/ctosp/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
-endif
-
 
 # Themes
 include vendor/themes/config.mk
-
-# Versioning System
-include vendor/ctosp/config/version.mk
-
-
-EXTENDED_POST_PROCESS_PROPS := vendor/ctosp/tools/ctosp_process_props.py
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
