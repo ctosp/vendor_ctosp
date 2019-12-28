@@ -82,7 +82,7 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            lunch aosp_$target-$variant
+            lunch ctosp_$target-$variant
         fi
     fi
     return $?
@@ -247,14 +247,14 @@ function dddclient()
    fi
 }
 
-function aospremote()
+function ctospremote()
 {
     if ! git rev-parse --git-dir &> /dev/null
     then
         echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
         return 1
     fi
-    git remote rm aosp 2> /dev/null
+    git remote rm ctosp 2> /dev/null
     local PROJECT=$(pwd -P | sed -e "s#$ANDROID_BUILD_TOP\/##; s#-caf.*##; s#\/default##")
     # Google moved the repo location in Oreo
     if [ $PROJECT = "build/make" ]
@@ -265,8 +265,8 @@ function aospremote()
     then
         local PFX="platform/"
     fi
-    git remote add aosp https://android.googlesource.com/$PFX$PROJECT
-    echo "Remote 'aosp' created"
+    git remote add ctosp https://android.googlesource.com/$PFX$PROJECT
+    echo "Remote 'ctosp' created"
 }
 
 function cafremote()
@@ -874,7 +874,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/aosp/build/tools/repopick.py $@
+    $T/vendor/ctosp/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
