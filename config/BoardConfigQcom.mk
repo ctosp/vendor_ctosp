@@ -1,4 +1,4 @@
-include vendor/aosp/config/BoardConfigQcomDefs.mk
+include vendor/ctosp/config/BoardConfigQcomDefs.mk
 
 BOARD_USES_ADRENO := true
 

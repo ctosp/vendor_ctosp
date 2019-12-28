@@ -11,19 +11,19 @@ CUSTOM_BUILD_DATE := $(CUSTOM_DATE_YEAR)$(CUSTOM_DATE_MONTH)$(CUSTOM_DATE_DAY)-$
 
 CUSTOM_PLATFORM_VERSION := 10.0
 
-TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
+TARGET_PRODUCT_SHORT := $(subst ctosp_,,$(CUSTOM_BUILD))
 
-CUSTOM_VERSION := PixelExperience_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
+CUSTOM_VERSION := ctosp_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
 CUSTOM_VERSION_PROP := 10
-ROM_FINGERPRINT := PixelExperience/$(CUSTOM_PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
+ROM_FINGERPRINT := ctosp/$(CUSTOM_PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
 
 CUSTOM_PROPERTIES := \
-    org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
-    org.pixelexperience.version.display=$(CUSTOM_VERSION) \
-    org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
-    org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE) \
-    org.pixelexperience.fingerprint=$(ROM_FINGERPRINT)
+    org.ctosp.version=$(CUSTOM_VERSION_PROP) \
+    org.ctosp.version.display=$(CUSTOM_VERSION) \
+    org.ctosp.build_date=$(CUSTOM_BUILD_DATE) \
+    org.ctosp.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
+    org.ctosp.build_type=$(CUSTOM_BUILD_TYPE) \
+    org.ctosp.fingerprint=$(ROM_FINGERPRINT)
 
 ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/secure/releasekey
