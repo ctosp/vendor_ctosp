@@ -9,7 +9,7 @@ Additional functions:
 - pixelrebase:     Rebase a Gerrit change and push it again.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
-- githubremote:    Add git remote for PixelExperience Github.
+- githubremote:    Add git remote for Ctosp Github.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
