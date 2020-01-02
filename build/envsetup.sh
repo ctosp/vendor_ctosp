@@ -7,7 +7,7 @@ Additional functions:
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
 - pixelgerrit:     A Git wrapper that fetches/pushes patch from/to PixelExperience Gerrit Review.
 - pixelrebase:     Rebase a Gerrit change and push it again.
-- aospremote:      Add git remote for matching AOSP repository.
+- ctospremote:      Add git remote for matching ctosp repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
 - githubremote:    Add git remote for Ctosp Github.
 - mka:             Builds using SCHED_BATCH on all processors.
